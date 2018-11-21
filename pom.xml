@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.swinno.hadoop.cluster</groupId>
+  <artifactId>kmeans</artifactId>
+  <name>Archetype - kmeans</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
+    <hadoop.core.version>3.0.0</hadoop.core.version>
+	<mapreduce.client.core.version>2.7.3</mapreduce.client.core.version>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.hadoop</groupId>
+  		<artifactId>hadoop-common</artifactId>
+  		<version>3.0.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.hadoop</groupId>
+  		<artifactId>hadoop-mapreduce-client-core</artifactId>
+  		<version>2.7.3</version>
+  	</dependency>
+  	<dependency>
+    	<groupId>jdk.tools</groupId>
+       	<version>1.8.0_161</version>
+    	<artifactId>jdk.tools</artifactId>
+    	<scope>system</scope>
+    	<systemPath>C:/Program Files/Java/jdk1.8.0_161/lib/tools.jar</systemPath>
+	</dependency>
+
+  </dependencies>
+  <build>
+  	<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.6.1</version>
+        <configuration>
+        	<verbose>true</verbose>
+        	<fork>true</fork>
+        	<executable>C:/Program Files/Java/jdk1.8.0_161/bin/javac</executable>
+        	<compilerVersion>1.8</compilerVersion>
+          	<source>1.8</source>
+          	<target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+     	<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-jar-plugin</artifactId>
+  		<version>3.0.2</version>
+  		<configuration>
+  			<archive>
+  				<manifest>
+  					<mainClass>com.swinno.hadoop.cluster.KmeansHadoop</mainClass>
+  				</manifest>
+  			</archive>
+  		</configuration>
+  		</plugin>
+    </plugins>
+  </build>
+  <version>1</version>
+</project>
